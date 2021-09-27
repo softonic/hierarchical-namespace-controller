@@ -9,7 +9,6 @@ metadata:
   labels:
 {{- include "hierarchical-namespace-controller.labels" . | nindent 4 }}
   name: hnc-controller-manager-metrics-service
-  namespace: hnc-system
 spec:
   ports:
   - name: https
