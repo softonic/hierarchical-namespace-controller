@@ -13,7 +13,7 @@ jobs:
     - uses: goodsmileduck/helm-push-action@v3.2.4
       env:
         SOURCE_DIR: '.'
-        CHART_FOLDER: '.'
+        CHART_FOLDER: 'chart'
         CHARTMUSEUM_URL: 'https://charts.softonic.io'
         CHARTMUSEUM_USER: '${{ secrets.CHARTMUSEUM_USER }}'
         CHARTMUSEUM_PASSWORD: '${{ secrets.CHARTMUSEUM_PASSWORD }}'
