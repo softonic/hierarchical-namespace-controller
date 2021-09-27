@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-{{- include "hierarchical-namespace-controller.selectorLabels" . | nindent 6 }}
+{{- include "hierarchical-namespace-controller.selectorLabels" . | nindent 8 }}
 {{- with .Values.customLabels }}
 {{- toYaml . | nindent 6 }}
 {{- end }}
