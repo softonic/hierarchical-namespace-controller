@@ -19,7 +19,8 @@ serviceAccount:
   annotations: {}
   name: ""
 
-podAnnotations: {}
+annotations:
+  nodepolicy.softonic.io/group: platform
 
 customLabels: {}
   #control-plane: controller-manager

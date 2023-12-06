@@ -2,12 +2,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: hnc-controller-manager
   labels:
 {{- include "hierarchical-namespace-controller.labels" . | nindent 4 }}
 {{- with .Values.customLabels }}
 {{- toYaml . | nindent 4 }}
 {{- end }}
-  name: hnc-controller-manager
+  annotations:
+   {{- toYaml .Values.annotations | nindent 8 }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
